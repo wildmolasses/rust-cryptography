@@ -1,3 +1,3 @@
-pub mod vignere;
+pub mod vigenere;
 
 fn main() {}

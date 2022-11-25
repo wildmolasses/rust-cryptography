@@ -1,4 +1,4 @@
-pub fn vignere_encrypt(m: &str, k: &str) -> String {
+pub fn vigenere_encrypt(m: &str, k: &str) -> String {
     if k.chars().any(|char| !char.is_ascii_alphabetic()) {
         panic!("non ascii alphabetic keyword")
     };
@@ -28,8 +28,8 @@ mod tests {
     use super::*;
     #[test]
     fn it_works() {
-        assert_eq!(vignere_encrypt("attackatdawn", "LEMON"), "LXFOPVEFRNHR");
-        assert_eq!(vignere_encrypt("DO YOU KNOW THE LAND WHERE THE ORANGE TREE BLOSSOMS?
+        assert_eq!(vigenere_encrypt("attackatdawn", "LEMON"), "LXFOPVEFRNHR");
+        assert_eq!(vigenere_encrypt("DO YOU KNOW THE LAND WHERE THE ORANGE TREE BLOSSOMS?
         THE COUNTRY OF GOLDEN FRUITS AND MARVELOUS ROSES,
         WHERE THE BREEZE IS SOFTER AND BIRDS LIGHTER,
         WHERE BEES GATHER POLLEN IN EVERY SEASON,
