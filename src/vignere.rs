@@ -20,8 +20,7 @@ pub fn vignere_encrypt(m: &str, k: &str) -> String {
 pub fn shift(char: char, n: u32) -> char {
     let char = char as u32 - 65;
     let n = n - 65;
-    let new_char = char::from_u32(((n + char) % 26) + 65).unwrap();
-    new_char
+    char::from_u32(((n + char) % 26) + 65).unwrap()
 }
 
 #[cfg(test)]
